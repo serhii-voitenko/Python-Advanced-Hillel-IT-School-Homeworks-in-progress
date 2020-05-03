@@ -6,10 +6,7 @@
 """
 
 keys = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-oper_dict = {}
-for k in keys:
-    oper_dict.update({k: k * k})
-print(oper_dict)
+print({k: k * k for k in keys})
 
 """
 2) Сгенерировать массив(list()). Из диапазона чисел от 0 до 100 записать в результирующий массив только четные числа. 
@@ -62,7 +59,7 @@ def greatest_numbers():
 
 def min_key():
     copy_list = ARRAY.copy()
-    print(f'Min value: 0. Its index is - {copy_list.index(0)}')
+    print(f'Min value: {min(copy_list)}. Its index is - {copy_list.index(0)}')
 
 
 def reverse_list():
