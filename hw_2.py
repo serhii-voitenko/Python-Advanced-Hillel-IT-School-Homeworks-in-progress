@@ -89,3 +89,5 @@ print(some_function([1, 3, 4, 10, 14], 3))
 # Слова состоят только из букв. Вам нужно проверить есть ли в исходной строке три слова подряд.
 # Для примера, в строке "hello 1 one two three 15 world" есть три слова подряд.
 
+some_string = "hello 1 one two three 15 world"
+some_string
