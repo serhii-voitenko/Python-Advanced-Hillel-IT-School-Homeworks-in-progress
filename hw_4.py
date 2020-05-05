@@ -12,10 +12,12 @@ each element of array A is an integer within the range [−1,000,000..1,000,000]
 
 
 def solution(A):
-    return min(A)
+    for elem in range(1, 100001):
+        if elem not in A:
+            return elem
 
 
-print(solution([-2, -3, 0, 2, 4, 1, 9]))
+print(solution([-2, -3, 0, 2, 4, 3, 1, 9]))
 
 
 """TASK-2
@@ -40,6 +42,17 @@ longest binary gap is of length 5. Given N = 32 the function should return 0, be
 Assume that:
 N is an integer within the range [1..2,147,483,647].
 """
+import re
+
+
+def solution2(N):
+    bin_pattern = bin(N).split('1')
+    if re.findall(r"[1][0]+[1]", bin(N)):
+        return max(len(elem) for elem in bin_pattern if elem.isdigit())
+    return 0
+
+
+print(solution2(529))
 
 
 """TASK-3
@@ -70,3 +83,12 @@ Assume that:
 N and K are integers within the range [0..100];
 each element of array A is an integer within the range [−1,000..1,000].
 """
+
+
+def solution3(A, K):
+    for x in range(K-1):
+        A.append(A[0]), A.pop(0)
+    return A
+
+
+print(solution3([3, 8, 9, 7, 6], 3))
