@@ -54,8 +54,9 @@ def counter_log(file):
         def wrapper(a):
             start = datetime.now()
             func(a)
+            finish = datetime.now()
             with open(file, 'a+') as log_file:
-                log_file.write(f'\nfunction {func.__name__} with variable {a}, \nworks {datetime.now() - start}\n')
+                log_file.write(f'\nfunction {func.__name__} with variable {a}, \nworks {finish - start}\n')
 
         def clear_file_log():
             with open(file, 'w') as log_file:
