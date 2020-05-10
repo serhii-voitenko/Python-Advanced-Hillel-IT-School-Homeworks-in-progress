@@ -29,21 +29,13 @@ print(data)
 """
 
 result = {}
-Kyev_data = []
-Dnepr_data = []
-Lviv_data = []
+
 for element in data:
     for key, value in element.items():
         if key == 'city':
-            if value == 'Kiev':
-                Kyev_data.append({k: element[k] for k in element.keys() - {'city'}})
-                result.update({value: Kyev_data})
-            elif value == 'Dnepr':
-                Dnepr_data.append({k: element[k] for k in element.keys() - {'city'}})
-                result.update({value: Dnepr_data})
-            else:
-                Lviv_data.append({k: element[k] for k in element.keys() - {'city'}})
-                result.update({value: Lviv_data})
+            result.update({value: ''})
+            if value in result.keys():
+                result.update
 
 print(result)
 
