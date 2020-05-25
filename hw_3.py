@@ -10,8 +10,9 @@ Change a given string to a new string where the first and last chars have been e
 
 
 def change_string(str1):
-    str = str1.replace(str1[0], str1[-1])
-    return str.replace(str[1:], str1[1:])
+    # str = str1.replace(str1[0], str1[-1])
+    # str2 = str1.replace(str1[1:-1], str1)
+    # return str.replace(str[1:], str1[1:])
 
 
 print(change_string('abcd'))  # dbcd
